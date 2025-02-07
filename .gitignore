@@ -1,0 +1,8 @@
+# .gitignore
+.env
+.env.local
+.env.*.local
+.idea
+node_modules
+public/build
+/var
