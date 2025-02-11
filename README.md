@@ -61,4 +61,3 @@ npm start
 - Implement unit and integration tests
 - Add more features to the application
 - Build the frontend with React
-- 
