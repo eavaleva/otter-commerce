@@ -1,0 +1,48 @@
+├── otter-backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── passport.ts
+│   │   │   └── database.ts
+│   │   ├── controllers/
+│   │   │   ├── auth.ts
+│   │   │   ├── product.ts
+│   │   │   ├── order.ts
+│   │   │   └── cart.ts
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── error.ts
+│   │   │   └── validation.js
+│   │   ├── routes/
+│   │   │   ├── auth.ts
+│   │   │   ├── product.ts
+│   │   │   └── order.ts
+│   │   ├── services/
+│   │   │   ├── auth.ts
+│   │   │   ├── product.ts
+│   │   │   └── stripe.ts
+│   │   ├── utils/
+│   │   │   ├── logger.ts
+│   │   │   └── errorHandler.ts
+│   │   └── app.ts
+│   ├── prisma/
+│   │   └── schema.prisma
+│   ├── tests/
+│   │   ├── integration/
+│   │   └── unit/
+│   └── package.json
+├── otter-frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   ├── layout/
+│   │   │   └── features/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── types/
+│   │   └── utils/
+│   ├── public/
+│   └── package.json
+└── docker-compose.yml
+```

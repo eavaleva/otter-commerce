@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
-import userRoute from './routes/user.js';
+import router from './routes/index.js';
 
 import { validateEnv } from './utils/index.js';
 import { connectDB, disconnectDB } from './config/database.js';
@@ -19,10 +19,13 @@ async function initializeApp() {
         app.use(express.json());
         app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
         app.use(cors());
-        app.use('/', userRoute);
 
+        // API Health Check
         app.get('/', (_req, _res) =>
             _res.status(200).send({ message: 'Hello World' }));
+
+
+        app.use('/api/v1', router);
 
         app.listen(process.env.SERVER_PORT, () => {
             console.log(`Server is running on port ${process.env.SERVER_PORT}`);
